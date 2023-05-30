@@ -16,4 +16,10 @@ return {
       require("catppuccin").setup {}
     end,
   },
+  {
+    "HerringtonDarkholme/yats.vim"
+  },
+  {
+    "tpope/vim-fugitive"
+  }
 }

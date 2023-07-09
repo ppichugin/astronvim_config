@@ -10,22 +10,49 @@ return {
   --   end,
   -- },
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
     config = function()
-      require("catppuccin").setup {}
+      require("nvim-surround").setup {
+        -- Configuration here, or leave empty to use defaults
+      }
     end,
   },
   {
-    "HerringtonDarkholme/yats.vim"
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+    event = "User Astrofile",
+    cmd = { "TodoQuickFix" },
+    keys = {
+      { "<leader>T", "<cmd>TodoTelescope<cr>", desc = "Open TODOs in Telescope" },
+    },
   },
   {
-    "tpope/vim-fugitive"
+    "catppuccin/nvim",
+    name = "catppuccin",
+    config = function() require("catppuccin").setup {} end,
+  },
+  {
+    "uloco/bluloco.nvim",
+    lazy = false,
+    priority = 1000,
+    dependencies = { "rktjmp/lush.nvim" },
+    config = function()
+      -- your optional config goes here, see below.
+    end,
+  },
+  {
+    "HerringtonDarkholme/yats.vim",
+  },
+  {
+    "tpope/vim-fugitive",
   },
   {
     "rebelot/heirline.nvim",
     opts = function(_, opts)
-      local status = require("astronvim.utils.status")
+      local status = require "astronvim.utils.status"
       opts.statusline = {
         -- statusline
         hl = { fg = "fg", bg = "bg" },
@@ -46,5 +73,5 @@ return {
       -- return the final configuration table
       return opts
     end,
-  }
+  },
 }

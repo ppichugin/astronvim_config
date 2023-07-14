@@ -9,6 +9,9 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  -- Rust tools
+  { "simrat39/rust-tools.nvim", lazy = false },
+  -- surrondings
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -28,11 +31,6 @@ return {
     keys = {
       { "<leader>T", "<cmd>TodoTelescope<cr>", desc = "Open TODOs in Telescope" },
     },
-  },
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    config = function() require("catppuccin").setup {} end,
   },
   {
     "uloco/bluloco.nvim",

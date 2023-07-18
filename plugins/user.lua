@@ -32,13 +32,23 @@ return {
       { "<leader>T", "<cmd>TodoTelescope<cr>", desc = "Open TODOs in Telescope" },
     },
   },
+  -- {
+  --   "uloco/bluloco.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   dependencies = { "rktjmp/lush.nvim" },
+  --   config = function()
+  --     -- your optional config goes here, see below.
+  --   end,
+  -- },
   {
-    "uloco/bluloco.nvim",
-    lazy = false,
-    priority = 1000,
-    dependencies = { "rktjmp/lush.nvim" },
+    "rebelot/kanagawa.nvim",
     config = function()
-      -- your optional config goes here, see below.
+      local kanagawa = require "kanagawa"
+      kanagawa.setup {
+        transparent = true,
+        theme = "wave",
+      }
     end,
   },
   {

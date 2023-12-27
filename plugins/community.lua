@@ -50,8 +50,8 @@ return {
   { import = "astrocommunity.syntax.hlargs-nvim", enabled = true },
   { import = "astrocommunity.lsp.inc-rename-nvim", enabled = true },
   { import = "astrocommunity.motion.mini-move", enabled = true },
-  { import = "astrocommunity.motion.mini-surround", enabled = true },
-  { import = "astrocommunity.motion.mini-bracketed", enabled = true },
+  -- { import = "astrocommunity.motion.mini-surround", enabled = true },
+  -- { import = "astrocommunity.motion.mini-bracketed", enabled = true },
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.editing-support.refactoring-nvim" },
   { import = "astrocommunity.editing-support.zen-mode-nvim" },
@@ -59,6 +59,6 @@ return {
   -- { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.bars-and-lines.scope-nvim" },
   { import = "astrocommunity.code-runner.overseer-nvim" },
-  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+  -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.test.neotest" },
 }
